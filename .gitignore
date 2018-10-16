@@ -70,3 +70,5 @@ data/sentry/*
 !data/sentry/.keep
 data/postgres/*
 !data/postgres/.keep
+
+.env
