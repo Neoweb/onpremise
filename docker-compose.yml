@@ -17,9 +17,8 @@ x-defaults: &defaults
     - memcached
     - smtp
 
-  # Only for local instances purposes, do not use in production
-  # env_file:
-  #   - .env
+  env_file: # Not for all environnements
+    - .env
 
   volumes:
     - sentry-data:/var/lib/sentry/files
