@@ -66,4 +66,7 @@ target/
 .python-version
 
 *.tar
-data/
+data/sentry/*
+!data/sentry/.keep
+data/postgres/*
+!data/postgres/.keep
