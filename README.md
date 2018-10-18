@@ -28,7 +28,7 @@ be fine stopping and removing the containers without worry.
 
 ## Scaleway install
 
-1. `curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose` - Docker Compose update
+1. ```curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose``` - Docker Compose update
 2. `chmod +x /usr/bin/docker-compose`
 3. Process with the 'Up and Running' section
 
@@ -48,6 +48,9 @@ docker-compose build # Build the services again after updating
 docker-compose run --rm web upgrade # Run new migrations
 docker-compose up -d # Recreate the services
 ```
+
+## Data Backup & Restore
+- ```tar -zcvf data/postgres_data_archive_`date +%d-%m-%Y"_"%H_%M_%S`.tar.gz data/postgres/``` - Generates an archive for Postgres' datas
 
 ## Resources
 

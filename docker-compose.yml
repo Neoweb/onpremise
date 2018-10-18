@@ -41,12 +41,12 @@ services:
     restart: unless-stopped
     image: postgres:9.5
     volumes:
-      - sentry-postgres:/var/lib/postgresql/data
+      - ./data/postgres/:/var/lib/postgresql/data
 
   web:
     <<: *defaults
     ports:
-      - '9000:80'
+      - '80:9000'
 
   cron:
     <<: *defaults

@@ -67,8 +67,8 @@ target/
 
 *.tar
 data/sentry/*
-!data/sentry/.keep
+!data/sentry/keep
 data/postgres/*
-!data/postgres/.keep
+!data/postgres/keep
 
 .env
