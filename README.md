@@ -2,10 +2,12 @@
 
 Official bootstrap for running your own [Sentry](https://sentry.io/) with [Docker](https://www.docker.com/).
 
+
 ## Requirements
 
  * Docker 1.10.0+
  * Compose 1.6.0+ _(optional)_
+
 
 ## Up and Running
 
@@ -26,17 +28,20 @@ There may need to be modifications to the included `docker-compose.yml` file to 
 Note that as long as you have your database bind-mounted, you should
 be fine stopping and removing the containers without worry.
 
+
 ## Scaleway install
 
 1. ```curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose``` - Docker Compose update
 2. `chmod +x /usr/bin/docker-compose`
 3. Process with the 'Up and Running' section
 
+
 ## Securing Sentry with SSL/TLS
 
 If you'd like to protect your Sentry install with SSL/TLS, there are
 fantastic SSL/TLS proxies like [HAProxy](http://www.haproxy.org/)
 and [Nginx](http://nginx.org/).
+
 
 ## Updating Sentry
 
@@ -49,8 +54,17 @@ docker-compose run --rm web upgrade # Run new migrations
 docker-compose up -d # Recreate the services
 ```
 
+
 ## Data Backup & Restore
+
+### Postgres
+
 - ```tar -zcvf data/postgres_data_archive_`date +%d-%m-%Y"_"%H_%M_%S`.tar.gz data/postgres/``` - Generates an archive for Postgres' datas
+- `tar -zxvf [[FILENAME]].tar.gz` - To Restore in `data/postgres`
+
+### Redis
+
+
 
 ## Resources
 
